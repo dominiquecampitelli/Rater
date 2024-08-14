@@ -12,13 +12,17 @@ import {
   RedirectLink,
 } from "./styles";
 
-export function Login() {
+export function Register() {
   return (
     <Container>
-      <Title>Acesse sua conta</Title>
-      <Subtitle>Bem vindo de volta! Entre com seus dados.</Subtitle>
+      <Title>Crie sua conta</Title>
+      <Subtitle>Insira seus dados para completar o cadastro.</Subtitle>
       <FormBox>
         <InputBox>
+          <InputLine>
+            <InputTitle>Nome completo</InputTitle>
+            <Input type="text" name="name" placeholder="Digite seu nome" />
+          </InputLine>
           <InputLine>
             <InputTitle>E-mail</InputTitle>
             <Input type="email" name="email" placeholder="Digite seu e-mail" />
@@ -31,12 +35,20 @@ export function Login() {
               placeholder="Digite sua senha"
             />
           </InputLine>
+          <InputLine>
+            <InputTitle>Confirmar senha</InputTitle>
+            <Input
+              type="password"
+              name="password"
+              placeholder="Confirme sua senha"
+            />
+          </InputLine>
         </InputBox>
-        <Button type="submit">Fazer login</Button>
+        <Button type="submit">Cadastrar</Button>
       </FormBox>
       <HaveAccount>
-        Não tem uma conta ainda?&nbsp;
-        <RedirectLink href="#">Criar conta</RedirectLink>
+        Já tem uma conta?&nbsp;
+        <RedirectLink href="#">Fazer login</RedirectLink>
       </HaveAccount>
     </Container>
   );
